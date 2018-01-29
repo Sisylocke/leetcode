@@ -1,13 +1,9 @@
 class Solution:
     def isPalindrome(self, s):
-        l = len(s)
-        i, j = 0, l - 1
-        while i <= j:
-            if s[i] != s[j]:
-                return False
-            i += 1
-            j -= 1
-        return True
+        if s == s[::-1]:
+            return True
+        else:
+            return False
 
     def longestPalindrome(self, s):
         if len(s) == 0:
